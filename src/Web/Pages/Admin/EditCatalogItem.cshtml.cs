@@ -23,7 +23,7 @@ namespace Microsoft.eShopWeb.Web.Pages.Admin
 
         public async Task OnGet(CatalogItemViewModel catalogModel)
         {
-            CatalogModel = catalogModel;
+            await Task.Run(() => CatalogModel = catalogModel);
         }
 
         public async Task<IActionResult> OnPostAsync()
